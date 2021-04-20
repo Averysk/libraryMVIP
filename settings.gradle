@@ -1,0 +1,3 @@
+include ':libraryMVIP'
+include ':app'
+rootProject.name = "DemoMVIP"
