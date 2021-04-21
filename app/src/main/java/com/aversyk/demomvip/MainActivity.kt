@@ -1,22 +1,26 @@
 package com.aversyk.demomvip
 
 import android.os.Bundle
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import com.aversyk.demomvip.databinding.ActivityMainBinding
 import me.yokeyword.fragmentation.Fragmentation
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         initFragmentation()
-        setSupportActionBar(findViewById(R.id.toolbar))
+        //setSupportActionBar(findViewById(R.id.toolbar))
+        setSupportActionBar(binding.toolbar)
 
-        findViewById<FloatingActionButton>(R.id.fab).setOnClickListener { view ->
+        binding.fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
         }
