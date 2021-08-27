@@ -1,3 +1,6 @@
-include ':libraryMVIP'
-include ':app'
 rootProject.name = "DemoMVIP"
+include ':app'
+include ':libraryMVIP'
+include ':fragmentation_core'
+include ':fragmentation'
+include ':fragmentation_swipeback'

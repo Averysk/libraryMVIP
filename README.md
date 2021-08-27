@@ -9,3 +9,6 @@ FragmentationX:
 
 原创链接:
 https://github.com/YoKeyword/Fragmentation
+
+因JCenter 被弃用和服务终止
+原创代码已迁移到当前项目
